@@ -21,10 +21,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/send-message', (req, res) => {
-    const { crypto, entryPrice, takeProfit, stopLoss } = req.body;
+    const { crypto, entryPrice, takeProfit1, takeProfit2, takeProfit3, stopLoss } = req.body;
     const message = `#${crypto}
     Entry Price: ${entryPrice}
-    Take Profit: ${takeProfit}
+    1st Target: ${takeProfit1}
+    2nd Target: ${takeProfit2}
+    3rd Target: ${takeProfit3}
     Stop Loss: ${stopLoss}
     `;
     bot.sendMessage(chatId, message)

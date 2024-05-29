@@ -53,14 +53,14 @@
         <label for="entryPrice">Entry Price:</label>
         <input type="number" id="entryPrice" name="entryPrice" required>
         <br>
-        <label for="takeProfit2">Take Profit2:</label>
+        <label for="takeProfit1">1st Take Profit:</label>
+        <input type="number" id="takeProfit1" name="takeProfit1" required>
+        <br>
+        <label for="takeProfit2">2nd Take Profit:</label>
         <input type="number" id="takeProfit2" name="takeProfit2" required>
         <br>
-        <label for="takeProfit3">Take Profit3:</label>
+        <label for="takeProfit3">3rd Take Profit:</label>
         <input type="number" id="takeProfit3" name="takeProfit3" required>
-        <br>
-        <label for="takeProfit1">Take Profit1:</label>
-        <input type="number" id="takeProfit1" name="takeProfit1" required>
         <br>
         <label for="stopLoss">Stop Loss:</label>
         <input type="number" id="stopLoss" name="stopLoss" required>
@@ -74,7 +74,9 @@
 
             const crypto = document.getElementById('crypto').value;
             const entryPrice = document.getElementById('entryPrice').value;
-            const takeProfit = document.getElementById('takeProfit').value;
+            const takeProfit1 = document.getElementById('takeProfit1').value;
+            const takeProfit2 = document.getElementById('takeProfit2').value;
+            const takeProfit3 = document.getElementById('takeProfit3').value;
             const stopLoss = document.getElementById('stopLoss').value;
 
             fetch('/send-message', {
